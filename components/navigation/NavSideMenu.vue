@@ -22,20 +22,7 @@
         </label>
       </div>
     </div>
-    <div class="mt-5 mb-4 w-full px-5">
-      <ui-button
-        title="Toggle Theme"
-        secondary
-        raised
-        rounded
-        full
-        class="text-white"
-        @click="toggleTheme"
-      >
-        <i :class="theme" class="mr-2" />
-        {{ $colorMode.value === 'light' ? 'Dark' : 'Light' }}
-      </ui-button>
-    </div>
+    <theme-toggle />
   </div>
 </template>
 
@@ -49,16 +36,7 @@ export default {
       categories,
     }
   },
-  computed: {
-    theme() {
-      return this.$colorMode.value === 'light' ? 'far fa-moon' : 'far fa-sun'
-    },
-  },
   methods: {
-    toggleTheme() {
-      this.$colorMode.preference =
-        this.$colorMode.value === 'light' ? 'dark' : 'light'
-    },
     toggleResources(category) {
       this.$emit('toggle', category)
     },
