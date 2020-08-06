@@ -15,10 +15,10 @@
       </svg>
       <nuxt-link to="/" class="text-lg font-bold hidden sm:block">
         Design
-        <span class="text-accent">Resource.</span>
+        <span class="text-primary">Resource.</span>
       </nuxt-link>
       <nuxt-link to="/" class="text-lg font-bold sm:hidden">
-        .D<span class="text-accent">R.</span>
+        .D<span class="text-primary">R.</span>
       </nuxt-link>
     </div>
     <resource-search @search="search" />
