@@ -1,56 +1,74 @@
 [
   {
-    "category": "Design Tools"
+    "category": "Design Tools",
+    "check": false
   },
   {
-    "category": "Inspiration"
+    "category": "Inspiration",
+    "check": false
   },
   {
-    "category": "Learn Design"
+    "category": "Learn Design",
+    "check": false
   },
   {
-    "category": "Stock Photos"
+    "category": "Stock Photos",
+    "check": false
   },
   {
-    "category": "Design News"
+    "category": "Design News",
+    "check": false
   },
   {
-    "category": "Illustrations"
+    "category": "Illustrations",
+    "check": false
   },
   {
-    "category": "Resources"
+    "category": "Resources",
+    "check": false
   },
   {
-    "category": "Icons"
+    "category": "Icons",
+    "check": false
   },
   {
-    "category": "Typography"
+    "category": "Typography",
+    "check": false
   },
   {
-    "category": "Color"
+    "category": "Color",
+    "check": false
   },
   {
-    "category": "Design Systems"
+    "category": "Design Systems",
+    "check": false
   },
   {
-    "category": "Podcasts"
+    "category": "Podcasts",
+    "check": false
   },
   {
-    "category": "Prototyping Tools"
+    "category": "Prototyping Tools",
+    "check": false
   },
   {
-    "category": "Wireframing"
+    "category": "Wireframing",
+    "check": false
   },
   {
-    "category": "Mockup Tools"
+    "category": "Mockup Tools",
+    "check": false
   },
   {
-    "category": "Books"
+    "category": "Books",
+    "check": false
   },
   {
-    "category": "Jobs"
+    "category": "Jobs",
+    "check": false
   },
   {
-    "category": "Accessibility"
+    "category": "Accessibility",
+    "check": false
   }
 ]
