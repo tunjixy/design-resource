@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+
+.btn {
+  @apply font-bold py-3 px-6 text-sm transition duration-300 ease-linear tracking-wider;
+}
+.btn:focus {
+  @apply outline-none shadow-outline-primary;
+}
+
+.btn-primary {
+  @apply bg-primary text-white;
+}
+.btn-primary:hover {
+  @apply bg-primary bg-opacity-75;
+}
+.btn-primary:active {
+  @apply transform translate-y-1;
+}
+.btn-primary:disabled {
+  @apply bg-opacity-50 text-primary cursor-not-allowed;
+}
+
+.btn-secondary {
+  @apply bg-transparent text-primary;
+}
+.btn-secondary:hover {
+  @apply bg-primary bg-opacity-25;
+}
+.btn-secondary:active {
+  @apply transform translate-y-1 bg-primary bg-opacity-25;
+}
+.btn-secondary:disabled {
+  @apply bg-opacity-50 text-primary cursor-not-allowed;
+}
+
+.btn-outline {
+  @apply border border-primary text-primary;
+}
+.btn-outline:hover {
+  @apply bg-primary bg-opacity-25;
+}
+.btn-outline:active {
+  @apply transform translate-y-1 bg-primary bg-opacity-25;
+}
+.btn-outline:disabled {
+  @apply bg-opacity-50 text-primary cursor-not-allowed;
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-lg transition-all duration-300 ease-in;
+}
+
+.dark-mode .card {
+  @apply bg-dark-gray-light transition-all duration-300 ease-in;
+}
+
+.trans-in {
+  @apply transition-all duration-300 ease-in;
+}
+
+@tailwind utilities;
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@screen sm {
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/* style for custom checkbox */
+.wrapper {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  user-select: none;
+  @apply font-karla text-white;
+}
+
+.wrapper input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+  @apply shadow rounded;
+}
+
+.wrapper:hover input ~ .checkmark {
+  @apply bg-accent;
+}
+
+/* When the checkbox is checked, add a blue background */
+.wrapper input:checked ~ .checkmark {
+  @apply bg-pink-500;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.wrapper input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.wrapper .checkmark:after {
+  left: 10px;
+  top: 6px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 7px;
+  background-color: transparent;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  border-radius: 0px;
+  background-color: transparent;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #ccc;
+}
