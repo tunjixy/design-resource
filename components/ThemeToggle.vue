@@ -27,7 +27,7 @@ export default {
     toggleTheme() {
       this.$colorMode.preference =
         this.$colorMode.value === 'light' ? 'dark' : 'light'
-      // this.$emit('close')
+      this.$emit('close')
     },
   },
 }

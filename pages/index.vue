@@ -1,13 +1,9 @@
 <template>
   <div>
-    <nav-side-drawer
-      :show="toggleNav"
-      @toggle="toggleResources"
-      @close="toggleNav = false"
-    />
+    <nav-side-drawer :show="toggleNav" @close="toggleNav = false" />
     <div class="flex h-screen w-full">
       <!-- Side nav -->
-      <nav-side-menu @toggle="toggleResources" />
+      <nav-side-menu />
 
       <!-- Main content -->
       <div class="w-full relative overflow-y-auto">
@@ -38,18 +34,24 @@
 </template>
 
 <script>
-import resources from '~/json/resources.json'
+// import resources from '~/json/resources.json'
 
 export default {
   data() {
     return {
-      resources,
+      // resources,
       searchTerm: '',
-      selectedCategory: [],
+      // selectedCategory: [],
       toggleNav: false,
     }
   },
   computed: {
+    resources() {
+      return this.$store.getters.resources
+    },
+    selectedCategory() {
+      return this.$store.getters.selectedCategory
+    },
     filteredResources() {
       if (this.selectedCategory.length > 0) {
         return this.resources.filter((resource) =>
@@ -68,7 +70,7 @@ export default {
     search(value) {
       this.searchTerm = value
     },
-    toggleResources(category) {
+    /* toggleResources(category) {
       if (this.selectedCategory.includes(category.category)) {
         const index = this.selectedCategory.indexOf(category.category)
         if (index > -1) {
@@ -77,7 +79,7 @@ export default {
       } else {
         this.selectedCategory.push(category.category)
       }
-    },
+    }, */
   },
 }
 </script>

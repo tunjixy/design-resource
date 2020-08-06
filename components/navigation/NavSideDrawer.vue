@@ -11,8 +11,8 @@
         class="h-full top-0 left-0 bg-dark-gray w-64 fixed z-50 flex flex-col overflow-y-auto"
       >
         <h2 class="font-bold text-lg text-white mt-4 px-5">Filter Resources</h2>
-        <resource-filter @toggle="toggleResources" />
-        <theme-toggle />
+        <resource-filter />
+        <theme-toggle @close="$emit('close')" />
       </div>
     </transition>
   </div>
@@ -25,11 +25,6 @@ export default {
     show: {
       type: Boolean,
       default: false,
-    },
-  },
-  methods: {
-    toggleResources(category) {
-      this.$emit('toggle', category)
     },
   },
 }

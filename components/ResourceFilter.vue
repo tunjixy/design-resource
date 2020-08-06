@@ -5,14 +5,14 @@
         v-for="(category, index) in categories"
         :key="index"
         class="wrapper text-sm"
-        :for="category.category"
+        :for="index"
       >
         {{ category.category }}
         <input
-          :id="category.category"
+          :id="index"
           type="checkbox"
-          :value="category.category"
-          @click="toggleResources(category)"
+          :checked="category.check"
+          @change="selectCategory(category, index)"
         />
         <span class="checkmark" />
       </label>
@@ -21,18 +21,20 @@
 </template>
 
 <script>
-import categories from '~/json/categories.json'
-
 export default {
   name: 'ResourceFilter',
-  data() {
-    return {
-      categories,
-    }
+  computed: {
+    categories() {
+      return this.$store.getters.categories
+    },
   },
   methods: {
-    toggleResources(category) {
-      this.$emit('toggle', category)
+    selectCategory(category, index) {
+      this.$store.commit('makeFilter', {
+        category: category.category,
+        checked: (category.check = !category.check),
+        index,
+      })
     },
   },
 }
